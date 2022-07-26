@@ -7,6 +7,7 @@ import { TocContext } from "../../../../context/tocContext";
 import {
   getChapterNumberFromEpubCFI,
   parseEpubCFI,
+  isValidEpubCfi,
 } from "../../../../utils/epubCFI";
 import "./BookSection.scss";
 
@@ -15,12 +16,14 @@ const BookSection: React.FC = () => {
   const { updateToc } = useContext(TocContext);
 
   const locationChanged = (epubcifi: string | number) => {
-    // console.log(epubcifi);
-    // let currentChapter;
-    // if (typeof epubcifi === "string") {
-    //   currentChapter = getChapterNumberFromEpubCFI(epubcifi);
-    // }
-    // console.log(currentChapter);
+    console.log(epubcifi);
+
+    if (typeof epubcifi === "string" && isValidEpubCfi(epubcifi)) {
+      const currentChapter = getChapterNumberFromEpubCFI(epubcifi);
+      console.log(currentChapter);
+      // call audio controller here
+    }
+
     updateLocation(epubcifi);
   };
 

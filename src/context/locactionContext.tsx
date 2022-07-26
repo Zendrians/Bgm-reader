@@ -15,12 +15,6 @@ const LocationContextWrapper: React.FC<React.PropsWithChildren> = ({
   children,
 }): ReactElement => {
   const [loc, setLoc] = React.useState<string | number>(0);
-  let currentChapter;
-
-  if (typeof loc === "string" && isValidEpubCfi(loc)) {
-    currentChapter = getChapterNumberFromEpubCFI(loc);
-    console.log(currentChapter);
-  }
 
   return (
     <LocationContext.Provider value={{ location: loc, updateLocation: setLoc }}>
