@@ -1,4 +1,5 @@
 import React from "react";
+import BookNavBar from "../BookNavBar/BookNavBar";
 import BookSection from "../BookSection/BookSection";
 import "./ReaderLayout.scss";
 
@@ -8,7 +9,7 @@ const ReaderLayout: React.FC = () => {
       <nav className="readerLayout--nav">
         Nav here with appName / BookTile/ currentBGM
       </nav>
-      <aside className="readerLayout--sidebar">index should go here</aside>
+      <BookNavBar />
       <BookSection />
       <aside className="readerLayout--sidebar">music and others here</aside>
     </main>
