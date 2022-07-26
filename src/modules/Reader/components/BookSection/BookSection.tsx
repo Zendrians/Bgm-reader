@@ -1,11 +1,14 @@
 import React, { useContext, useState } from "react";
 import { ReactReader } from "react-reader";
 import { LocationContext } from "../../../../context/locactionContext";
+import { Rendition } from "epubjs";
 import { Toc } from "../../../../types/gobalTypes";
 import "./BookSection.scss";
+import { TocContext } from "../../../../context/tocContext";
 
 const BookSection: React.FC = () => {
   const { location, updateLocation } = useContext(LocationContext);
+  const { updateToc } = useContext(TocContext);
 
   const locationChanged = (epubcifi: string | number) => {
     console.log(epubcifi);
@@ -13,10 +16,10 @@ const BookSection: React.FC = () => {
     updateLocation(epubcifi);
   };
 
-  const tocUpdated = (value: Toc) => {
-    console.log(value);
+  const tocUpdated = (newToc: any) => {
+    updateToc(newToc as Array<Toc>);
   };
-  const renditionUpdated = (value: any) => {
+  const renditionUpdated = (value: Rendition) => {
     console.log(value);
   };
 
