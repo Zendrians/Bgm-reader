@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LocationContext } from "../../../../context/locactionContext";
 import { TocContext } from "../../../../context/tocContext";
+import TocTile from "../TocTile/TocTile";
 import "./BookNavBar.scss";
 
 const BookNavBar: React.FC = () => {
@@ -13,14 +14,14 @@ const BookNavBar: React.FC = () => {
 
   const generateTocUiList = () => {
     if (!toc) return <div>No Toc</div>;
-    return toc.map((tocEl) => <div>{tocEl.label}</div>);
+    return toc.map((tocEl) => (
+      <TocTile tocItem={tocEl} goToChapter={goToChapter} key={tocEl.id} />
+    ));
   };
 
   return (
     <aside className="bookNavBar">
-      {/* this is the new nab{" "}
-      <button onClick={() => goToChapter("body4.xhtml")}>go</button> */}
-      {generateTocUiList()}
+      <ol>{generateTocUiList()}</ol>{" "}
     </aside>
   );
 };

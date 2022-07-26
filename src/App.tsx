@@ -1,4 +1,3 @@
-import "./App.css";
 import LocationContextWrapper from "./context/locactionContext";
 import TocContextWrapper from "./context/tocContext";
 import "./modules/Reader/container/ReaderContainer";

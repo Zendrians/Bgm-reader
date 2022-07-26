@@ -23,8 +23,6 @@ const BookSection: React.FC = () => {
     console.log(value);
   };
 
-  console.log("rerender");
-
   return (
     <section className="bookSection">
       <ReactReader
