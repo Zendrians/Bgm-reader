@@ -9,7 +9,7 @@ const TopBar: React.FC = () => {
         <div className="topBar--logoSpace">
           <MusicIcon fill="white" width={25} /> <span>Readify</span>
         </div>
-        <div className="topBar--bookTile">Book Title</div>
+        <div className="topBar--bookTile">Test Book</div>
         <div></div>
       </div>
     </nav>

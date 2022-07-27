@@ -36,7 +36,7 @@ const BookSection: React.FC<IBookSection> = ({ book }) => {
     updateToc(newToc as Array<Toc>);
   };
   const renditionUpdated = (value: Rendition) => {
-    // console.log(value);
+    console.log(value);
   };
 
   return (
