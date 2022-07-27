@@ -4,6 +4,6 @@
 
 ## ToDo
 
-- Improve Epub CFI parsing to better standarice location handling.
+- Improve Epub CFI parsing to better standardize location handling.
 - Add an external audio provider integration,
 
