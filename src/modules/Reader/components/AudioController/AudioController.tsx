@@ -1,5 +1,8 @@
 import React, { useContext, useState } from "react";
 import ReactHowler from "react-howler";
+import MusicIcon from "../../../../assets/tsxSvg/Music";
+import PauseIcon from "../../../../assets/tsxSvg/Pause";
+import PlayIcon from "../../../../assets/tsxSvg/Play";
 import { ChapterContext } from "../../../../context/chapterContext";
 import { Bgm, Book } from "../../../../types/gobalTypes";
 import "./AudioController.scss";
@@ -31,14 +34,21 @@ const AudioController: React.FC<IAudioController> = ({ book }) => {
             loop={true}
             volume={0.3}
           />
-          <div>
+          <div className="audioController--uiContainer">
+            <button onClick={() => setIsPlaying(!isPlaying)}>
+              {isPlaying ? (
+                <PauseIcon fill="white" width={25} />
+              ) : (
+                <PlayIcon fill="white" width={25} />
+              )}
+            </button>
             <span>{currentBgm.name}</span>
           </div>
-          <button onClick={() => setIsPlaying(false)}>pause!!</button>
-          <button onClick={() => setIsPlaying(true)}>play!!</button>
         </React.Fragment>
       ) : (
-        <div>No Bgm for this chapter</div>
+        <div className="audioController--noUiContainer">
+          <p>No BGM for this chapter</p>
+        </div>
       )}
     </div>
   );

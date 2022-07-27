@@ -1,6 +1,24 @@
 .audioController {
-    height: 100px;
-    background-color: #252526;
-    padding: 20px;
-    border-radius: 30px;
+  height: 25px;
+  background-color: #252526;
+  padding: 5px 5px;
+  border-radius: 30px;
+
+  &--uiContainer {
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    height: 100%;
+
+    & button {
+      justify-self: center;
+    }
+  }
+
+  &--noUiContainer {
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
 }
