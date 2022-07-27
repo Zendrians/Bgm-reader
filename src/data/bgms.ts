@@ -1,16 +1,21 @@
 import { Bgm } from "../types/gobalTypes";
 
 export const dark1: Bgm = {
-  name: "Dark1",
+  name: "Dark/Supense",
   url: "testAudio/Dark.mp3",
 };
 
 export const hopefull1: Bgm = {
-  name: "hopefull1",
+  name: "Hopeful (casual)",
   url: "testAudio/Hopeful.mp3",
 };
 
 export const desert1: Bgm = {
-  name: "desert1",
+  name: "Desert (casual)",
   url: "testAudio/Desert.mp3",
+};
+
+export const nightForest: Bgm = {
+  name: "Forest night",
+  url: "testAudio/NightNatureInsects.wav",
 };

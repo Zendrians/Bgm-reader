@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import ReactHowler from "react-howler";
 import MusicIcon from "../../../../assets/tsxSvg/Music";
+import NoMusic from "../../../../assets/tsxSvg/NoMusic";
 import PauseIcon from "../../../../assets/tsxSvg/Pause";
 import PlayIcon from "../../../../assets/tsxSvg/Play";
 import { ChapterContext } from "../../../../context/chapterContext";
@@ -32,7 +33,7 @@ const AudioController: React.FC<IAudioController> = ({ book }) => {
             src={currentBgm.url}
             playing={isPlaying}
             loop={true}
-            volume={0.3}
+            volume={0.2}
           />
           <div className="audioController--uiContainer">
             <button onClick={() => setIsPlaying(!isPlaying)}>
@@ -47,7 +48,8 @@ const AudioController: React.FC<IAudioController> = ({ book }) => {
         </React.Fragment>
       ) : (
         <div className="audioController--noUiContainer">
-          <p>No BGM for this chapter</p>
+          <NoMusic fill="white" width={25} />
+          <span>No BGM for this chapter</span>
         </div>
       )}
     </div>
