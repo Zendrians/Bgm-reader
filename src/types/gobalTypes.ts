@@ -6,6 +6,7 @@ export interface Toc {
 
 export interface Book {
   url: string;
+  name: string;
   playlist: Array<LinkedBgm>;
 }
 

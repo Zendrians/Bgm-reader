@@ -16,6 +16,6 @@ export const desert1: Bgm = {
 };
 
 export const nightForest: Bgm = {
-  name: "Forest night",
+  name: "Forest Night",
   url: "testAudio/NightNatureInsects.wav",
 };

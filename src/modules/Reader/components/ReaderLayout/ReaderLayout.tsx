@@ -13,7 +13,7 @@ interface IReactReader {
 const ReaderLayout: React.FC<IReactReader> = ({ book }) => {
   return (
     <main className="readerLayout">
-      <TopBar />
+      <TopBar book={book} />
       <BookNavBar />
       <BookSection book={book} />
       <ActionsBar book={book} />
