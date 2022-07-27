@@ -1,4 +1,5 @@
 import React from "react";
+import ActionsBar from "../ActionsBar/ActionsBar";
 import BookNavBar from "../BookNavBar/BookNavBar";
 import BookSection from "../BookSection/BookSection";
 import "./ReaderLayout.scss";
@@ -11,7 +12,7 @@ const ReaderLayout: React.FC = () => {
       </nav>
       <BookNavBar />
       <BookSection />
-      <aside className="readerLayout--sidebar">music and others here</aside>
+      <ActionsBar />
     </main>
   );
 };
