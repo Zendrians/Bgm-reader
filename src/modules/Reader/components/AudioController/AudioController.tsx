@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import ReactHowler from "react-howler";
-import MusicIcon from "../../../../assets/tsxSvg/Music";
 import NoMusic from "../../../../assets/tsxSvg/NoMusic";
 import PauseIcon from "../../../../assets/tsxSvg/Pause";
 import PlayIcon from "../../../../assets/tsxSvg/Play";
@@ -18,7 +17,6 @@ const AudioController: React.FC<IAudioController> = ({ book }) => {
 
   const setChapterBgm = () => {
     const matchedBgm = book.playlist.find((bgm) => bgm.chapter === chapter);
-    console.log(matchedBgm);
     if (matchedBgm) return matchedBgm;
     return null;
   };

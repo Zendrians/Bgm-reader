@@ -1,0 +1,30 @@
+.topBar {
+  grid-column: 1 / 4;
+  height: 50px;
+  background-color: #323233;
+  color: #e2e2e2;
+
+  &--wrapper {
+    display: grid;
+    grid-template-columns: 300px minmax(800px, auto) 300px;
+  }
+
+  &--logoSpace {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
+
+    & span {
+     height: min-content;
+     font-size: 24px;
+    }
+  }
+
+  &--bookTile {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 24px;
+  }
+}

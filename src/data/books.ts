@@ -10,3 +10,8 @@ export const testBook: Book = {
     { ...nightForest, chapter: 18 },
   ],
 };
+
+export const aliceInWonderland: Book = {
+  url: "https://react-reader.metabits.no/files/alice.epub",
+  playlist: [],
+};

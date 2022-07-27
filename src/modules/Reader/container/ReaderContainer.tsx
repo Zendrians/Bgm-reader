@@ -1,6 +1,6 @@
 import React from "react";
 import { Book } from "../../../types/gobalTypes";
-import { testBook } from "../../../data/books";
+import { aliceInWonderland, testBook } from "../../../data/books";
 import ReaderLayout from "../components/ReaderLayout/ReaderLayout";
 
 const ReaderContainer: React.FC = () => {
