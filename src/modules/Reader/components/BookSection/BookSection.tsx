@@ -10,10 +10,12 @@ import {
   isValidEpubCfi,
 } from "../../../../utils/epubCFI";
 import "./BookSection.scss";
+import { ChapterContext } from "../../../../context/chapterContext";
 
 const BookSection: React.FC = () => {
   const { location, updateLocation } = useContext(LocationContext);
   const { updateToc } = useContext(TocContext);
+  const { updateChapter } = useContext(ChapterContext);
 
   const locationChanged = (epubcifi: string | number) => {
     console.log(epubcifi);
@@ -21,7 +23,7 @@ const BookSection: React.FC = () => {
     if (typeof epubcifi === "string" && isValidEpubCfi(epubcifi)) {
       const currentChapter = getChapterNumberFromEpubCFI(epubcifi);
       console.log(currentChapter);
-      // call audio controller here
+      updateChapter(currentChapter);
     }
 
     updateLocation(epubcifi);
@@ -31,7 +33,7 @@ const BookSection: React.FC = () => {
     updateToc(newToc as Array<Toc>);
   };
   const renditionUpdated = (value: Rendition) => {
-    console.log(value);
+    // console.log(value);
   };
 
   return (

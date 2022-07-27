@@ -1,5 +1,4 @@
 import React, { ReactElement } from "react";
-import { getChapterNumberFromEpubCFI, isValidEpubCfi } from "../utils/epubCFI";
 
 interface ILocationContext {
   location: string | number;
