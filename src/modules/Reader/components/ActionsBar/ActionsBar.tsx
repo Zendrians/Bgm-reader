@@ -1,11 +1,16 @@
 import React from "react";
+import { Book } from "../../../../types/gobalTypes";
 import AudioController from "../AudioController/AudioController";
 import "./ActionBar.scss";
 
-const ActionBar: React.FC = () => {
+interface IActionBar {
+  book: Book;
+}
+
+const ActionBar: React.FC<IActionBar> = ({ book }) => {
   return (
     <aside className="actionsBar">
-      <AudioController />
+      <AudioController book={book} />
     </aside>
   );
 };

@@ -6,7 +6,6 @@ import { Book, Toc } from "../../../../types/gobalTypes";
 import { TocContext } from "../../../../context/tocContext";
 import {
   getChapterNumberFromEpubCFI,
-  parseEpubCFI,
   isValidEpubCfi,
 } from "../../../../utils/epubCFI";
 import "./BookSection.scss";
@@ -22,7 +21,7 @@ const BookSection: React.FC<IBookSection> = ({ book }) => {
   const { updateChapter } = useContext(ChapterContext);
 
   const locationChanged = (epubcifi: string | number) => {
-    console.log(epubcifi);
+    // console.log(epubcifi);
 
     if (typeof epubcifi === "string" && isValidEpubCfi(epubcifi)) {
       const currentChapter = getChapterNumberFromEpubCFI(epubcifi);

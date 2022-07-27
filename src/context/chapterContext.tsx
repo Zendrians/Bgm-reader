@@ -17,7 +17,6 @@ const ChapterContextWrapper: React.FC<React.PropsWithChildren> = ({
 
   const handleChangeChapter = (newChapter: number) => {
     if (newChapter === chapter) return;
-    console.log("Handling");
     setChapter(newChapter);
   };
 

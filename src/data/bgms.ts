@@ -12,5 +12,5 @@ export const hopefull1: Bgm = {
 
 export const desert1: Bgm = {
   name: "desert1",
-  url: "testAudio/Desert.mp33",
+  url: "testAudio/Desert.mp3",
 };

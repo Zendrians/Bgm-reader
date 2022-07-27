@@ -17,7 +17,7 @@ const ReaderLayout: React.FC<IReactReader> = ({ book }) => {
       </nav>
       <BookNavBar />
       <BookSection book={book} />
-      <ActionsBar />
+      <ActionsBar book={book} />
     </main>
   );
 };
