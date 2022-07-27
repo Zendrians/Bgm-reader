@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { ReactReader } from "react-reader";
 import { LocationContext } from "../../../../context/locactionContext";
 import { Rendition } from "epubjs";
-import { Toc } from "../../../../types/gobalTypes";
+import { Book, Toc } from "../../../../types/gobalTypes";
 import { TocContext } from "../../../../context/tocContext";
 import {
   getChapterNumberFromEpubCFI,
@@ -12,7 +12,11 @@ import {
 import "./BookSection.scss";
 import { ChapterContext } from "../../../../context/chapterContext";
 
-const BookSection: React.FC = () => {
+interface IBookSection {
+  book: Book;
+}
+
+const BookSection: React.FC<IBookSection> = ({ book }) => {
   const { location, updateLocation } = useContext(LocationContext);
   const { updateToc } = useContext(TocContext);
   const { updateChapter } = useContext(ChapterContext);
@@ -45,7 +49,7 @@ const BookSection: React.FC = () => {
         tocChanged={tocUpdated}
         getRendition={renditionUpdated}
         // url="https://react-reader.metabits.no/files/alice.epub"
-        url="testbook\V.0.10.epub"
+        url={book.url}
       />
     </section>
   );
