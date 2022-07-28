@@ -17,3 +17,14 @@ export const aliceInWonderland: Book = {
   name: "Alice in Wonderland",
   playlist: [],
 };
+
+export const loremIpsumBook: Book = {
+  url: "testbook/LoremIpsumBook.epub",
+  name: "Lorem Ipsum Book",
+  playlist: [
+    { ...dark1, chapter: 1 },
+    { ...desert1, chapter: 2 },
+    { ...nightForest, chapter: 3 },
+    { ...hopefull1, chapter: 4 },
+  ],
+};

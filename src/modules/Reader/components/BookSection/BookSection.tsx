@@ -25,7 +25,7 @@ const BookSection: React.FC<IBookSection> = ({ book }) => {
 
     if (typeof epubcifi === "string" && isValidEpubCfi(epubcifi)) {
       const currentChapter = getChapterNumberFromEpubCFI(epubcifi);
-      console.log(currentChapter);
+      // console.log(currentChapter);
       updateChapter(currentChapter);
     }
 
